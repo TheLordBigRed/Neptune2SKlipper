@@ -74,3 +74,21 @@ managed_services = klipper
 server = http://192.168.1.72:7912/
 sync_rate = 5
 
+[update_manager katapult]
+type = git_repo
+origin = https://github.com/Arksine/Katapult.git
+path = ~/katapult
+is_system_service = False
+
+[update_manager happy-hare]
+type = git_repo
+path = ~/Happy-Hare
+origin = https://github.com/moggieuk/Happy-Hare.git
+primary_branch = main
+managed_services = klipper
+
+[mmu_server]
+enable_file_preprocessor = True
+enable_toolchange_next_pos = True
+update_spoolman_location = True
+
